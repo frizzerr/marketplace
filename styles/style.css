@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+main,
+header {
+    margin: 5vh 10vw;
+}
+
+h2 {
+    color: #000;
+}
+
+h3 {
+    color: #000;
+}
+
+p {
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.product {
+    background-color: rgba(15, 70, 182, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-photo {
+    max-width: 100px;
+    box-shadow: 0 0 5px #000;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: #ffffff;
+
+}
+
+.product a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    border: none;
+    min-width: 50%;
+}
+
+.buttonimg {
+    height: 15px;
+}
+
+
+#cart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#cart-button img {
+    max-width: 32px;
+    max-height: 32px;
+}
+
+#cart-button:hover {
+    background-color: rgb(170, 170, 255);
+}
+
+#cart-button.active {
+    background-color: rgb(170, 255, 170);
+}
+
+#cart-products::before {
+    content: "";
+    border-bottom: solid black 16px;
+    position: relative;
+    top: -2.7rem;
+    left: 15.8rem;
+    z-index: -1;
+}
+
+#cart-products {
+    border: 10px solid black;
+    border: 0.5rem;
+    background-color: white;
+    top: 59px;
+    right: 0rem;
+    left: -16rem;
+    position: absolute;
+    padding: 10px;
+    text-align: left;
+}
+
+.hide {
+    display: none;
+}
+
+#carts-products p{
+    line-height: 2rem;
+}
+
+#carts-products p img{
+    max-height: 2rem;
+    max-width: 2rem;
+}
+
+#carts-products button {
+border: 1px solid black;
+margin: 0.5rem 0;
+}
+
+.modal {
+    background-color: black;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.modal-content {
+    border: 1px solid black;
+    margin: 5vh auto;
+    margin: 20px;
+    width: 80%;
+    background-color: white;
+}
+
+#order-block {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+@media screen and (max-width: 1000px) {
+
+    #products-grid,
+    #user-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #products-grid,
+    #user-products-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.modal-content {
+    border: 1px solid black;
+    margin: 5vh auto;
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+}
+
+#modalinput {
+   border: 1px solid rgb(165, 42, 42);
+   border: 1rem;
+}
+
+#order-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product-price {
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.product-desc {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
